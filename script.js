@@ -67,7 +67,7 @@ function cheakDraw() {
 
         if (isDraw) {
             isGameOver = true;
-            document.querySelector("#results").innerHTML = "Draw!";
+            document.querySelector("#results").innerHTML = "Empate!";
             document.querySelector("#play-again").style.display = "inline";
         }
     }
