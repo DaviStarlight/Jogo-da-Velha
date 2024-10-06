@@ -24,9 +24,11 @@ function changeTurn() {
     if (turn === "X") {
         turn = "O";
         document.querySelector(".bg").style.left = "85px";
+        document.querySelector(".turn-container h3").textContent = "Vez da Máquina"; // Alterando o texto para vez da máquina
     } else {
         turn = "X";
         document.querySelector(".bg").style.left = "0";
+        document.querySelector(".turn-container h3").textContent = "Sua vez!"; // Alterando o texto para vez do jogador
     }
 }
 
@@ -43,12 +45,16 @@ function cheakWin() {
         let v1 = boxes[winConditions[i][1]].innerHTML;
         let v2 = boxes[winConditions[i][2]].innerHTML;
 
-        if (v0 != "" && v0 === v1 && v0 === v2) {
+        if (v0 !== "" && v0 === v1 && v0 === v2) {
             isGameOver = true;
-            document.querySelector("#results").innerHTML = turn + " venceu!";
+            if (v0 === "X") {
+                document.querySelector("#results").innerHTML = "Você ganhou!"; // Mensagem para o jogador
+            } else {
+                document.querySelector("#results").innerHTML = "Você perdeu!"; // Mensagem para a máquina
+            }
             document.querySelector("#play-again").style.display = "inline";
 
-            for (j = 0; j < 3; j++) {
+            for (let j = 0; j < 3; j++) {
                 boxes[winConditions[i][j]].style.backgroundColor = "#8D6E63"; // Marrom rosado para vitória
                 boxes[winConditions[i][j]].style.color = "#3E2723"; // Texto em marrom escuro
             }
@@ -107,7 +113,10 @@ function newRound() {
 
     // Se a máquina começar, faz a jogada dela automaticamente
     if (turn === "O") {
+        document.querySelector(".turn-container h3").textContent = "Vez da Máquina"; // Atualiza o texto quando for a vez da máquina
         setTimeout(machinePlay, 500);
+    } else {
+        document.querySelector(".turn-container h3").textContent = "Sua vez!"; // Atualiza o texto para a vez do jogador
     }
 }
 
