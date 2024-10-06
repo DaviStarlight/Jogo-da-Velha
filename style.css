@@ -20,10 +20,10 @@ body{
     padding-top: 5vh;
 }
 
-.turn-container{
+.turn-container {
     width: 170px;
     height: 80px;
-    margin: auto;
+    margin: 60px auto; /* Adiciona uma margem no topo */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
