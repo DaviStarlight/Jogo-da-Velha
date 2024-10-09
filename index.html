@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo da Velha</title>
+    <title>Jogo da Velha – Davi</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body>    
     <div class="turn-container">
-        <h3>Sua vez!</h3> <!-- Este texto será alterado dinamicamente -->
+        <h3>Sua vez!</h3>
         <div class="turn-box align">X</div>
         <div class="turn-box align">O</div>
         <div class="bg"></div>
     </div>
+    <div class="scoreboard">
+        <h4 style="font-size: 40px; color: #A1887F; text-align: center;">
+            <span id="player-wins" style="color: #A1887F;">0</span> - 
+            <span id="machine-wins" style="color: #A1887F;">0</span>
+        </h4>
+    </div>    
+    
     <div class="main-grid">
         <div class="box align">0</div>
         <div class="box align">1</div>
@@ -27,6 +35,7 @@
     </div>
     <h2 id="results"></h2>
     <button id="play-again">Jogar novamente</button>
+
     <script src="script.js"></script>
 </body>
 </html>
