@@ -3,6 +3,10 @@ let turn = "X"; // Jogador humano começa com X
 let isGameOver = false;
 let currentRound = 1; // Controla o turno inicial a cada rodada
 
+// Contadores de vitórias
+let playerWins = 0;
+let machineWins = 0;
+
 // Reiniciar o jogo e adicionar eventos de clique
 boxes.forEach(e => {
     e.innerHTML = "";
@@ -48,9 +52,13 @@ function cheakWin() {
         if (v0 !== "" && v0 === v1 && v0 === v2) {
             isGameOver = true;
             if (v0 === "X") {
-                document.querySelector("#results").innerHTML = "Você ganhou!"; // Mensagem para o jogador
+                document.querySelector("#results").innerHTML = "Você ganhou!";
+                playerWins++; // Incrementa vitórias do jogador
+                document.querySelector("#player-wins").textContent = playerWins;
             } else {
-                document.querySelector("#results").innerHTML = "Você perdeu!"; // Mensagem para a máquina
+                document.querySelector("#results").innerHTML = "Você perdeu!";
+                machineWins++; // Incrementa vitórias da máquina
+                document.querySelector("#machine-wins").textContent = machineWins;
             }
             document.querySelector("#play-again").style.display = "inline";
 
