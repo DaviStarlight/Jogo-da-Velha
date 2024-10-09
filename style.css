@@ -1,17 +1,17 @@
-*{
+* {
     color: #F2E3D5;
     font-family: sans-serif;
     transition: 0.2s ease-in-out;
     user-select: none;
 }
 
-.align{
+.align {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-body{
+body {
     background-color: #3E2723;
     margin: 0;
     padding: 0;
@@ -23,31 +23,31 @@ body{
 .turn-container {
     width: 170px;
     height: 80px;
-    margin: 60px auto; /* Adiciona uma margem no topo */
+    margin: 50px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     position: relative;
 }
 
-.turn-container h3{
+.turn-container h3 {
     margin: 0;
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-.turn-container .turn-box{
+.turn-container .turn-box {
     border: 3px solid #8D6E63;
     font-size: 1.6rem;
     font-weight: 700;
     color: #F2E3D5;
 }
 
-.turn-container .turn-box:nth-child(even){
+.turn-container .turn-box:nth-child(even) {
     border-right: none;
 }
 
-.bg{
+.bg {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -57,7 +57,7 @@ body{
     z-index: -1;
 }
 
-.main-grid{
+.main-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -67,7 +67,7 @@ body{
     border: 2px solid #8D6E63;
 }
 
-.box{
+.box {
     cursor: pointer;
     font-size: 2rem;
     font-weight: 700;
@@ -75,11 +75,11 @@ body{
     color: #F2E3D5;
 }
 
-.box:hover{
+.box:hover {
     background-color: #A1887F;
 }
 
-#play-again{
+#play-again {
     background-color: #5D4037;
     padding: 10px 25px;
     border: none;
@@ -90,7 +90,7 @@ body{
     color: #F2E3D5;
 }
 
-#play-again:hover{
+#play-again:hover {
     padding: 10px 40px;
     background-color: #795548;
     color: #FFF;
